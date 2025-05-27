@@ -166,28 +166,55 @@ footer{font-size:0.875em; margin-top:12em; text-align:center;}
     flex-direction: column;
     align-items: center;
     width: 100%;
+    text-align: center;
+}
+
+.organizer-info h4,
+.organizer-info p {
+    width: 100%;
+    text-align: center;
+    margin: 0;
 }
 
 .organizer-info h4 {
-    margin: 0 0 5px 0;
     color: #2a2a2a;
     font-size: 1.1em;
-    text-align: center;
+    margin-bottom: 5px;
 }
 
 .organizer-info p {
-    margin: 0;
     color: #666;
     font-size: 0.9em;
-    text-align: center;
 }
 
-.organizer-section h3 {
-    grid-column: 1 / -1;
-    border-bottom: 2px solid #2a2a2a;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-    text-align: center;
+/* Invited Speakers Section */
+.invited-speakers {
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.invited-speakers .organizer-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 10px;
+    max-width: 900px;
+}
+
+.invited-speakers .organizer-image {
+    margin: 0 20px 0 0;
+}
+
+.invited-speakers .organizer-info {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.invited-speakers .organizer-info h4,
+.invited-speakers .organizer-info p {
+    text-align: left;
 }
 
 /* Global paragraph style that excludes organizer info */
