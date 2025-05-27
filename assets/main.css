@@ -47,13 +47,17 @@ h1{font-size:2.67em;}
 h2{font-size:2.00em;}
 h3{font-size:1.67em;}
 h4{font-size:1.33em;}
-p{margin:24px auto 24px auto; padding:0px; width:900px; text-align:left;}
+p:not(.organizer-info p) {
+    text-align: justify;
+    margin: 24px auto;
+    padding: 0;
+    width: 900px;
+}
 li a, p a {text-decoration:underline; text-decoration-color:#b8860b;}
 ul{margin:24px auto 24px auto; padding:0px; width:800px; text-align:left;}
 ul li{margin:0px auto 0px auto; padding:0px; text-align:left;}
 i,em{font-style:italic;}
 b,strong{font-weight:bold;}
-p, li {text-align: justify !important;}
 sup{
     vertical-align: super;
     font-size: 0.8em;
@@ -158,39 +162,70 @@ footer{font-size:0.875em; margin-top:12em; text-align:center;}
 }
 
 .organizer-info {
-    flex: 1;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    width: 100%;
     text-align: center;
+}
+
+.organizer-info h4,
+.organizer-info p {
+    width: 100%;
+    text-align: center;
+    margin: 0;
 }
 
 .organizer-info h4 {
-    margin: 0 0 5px 0;
     color: #2a2a2a;
     font-size: 1.1em;
-    text-align: center;
-    width: 100%;
+    margin-bottom: 5px;
 }
 
 .organizer-info p {
-    margin: 0;
     color: #666;
     font-size: 0.9em;
-    width: 100%;
-    text-align: center;
 }
 
-.organizer-section h3 {
-    grid-column: 1 / -1;
-    border-bottom: 2px solid #2a2a2a;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
+/* Invited Speakers Section */
+.invited-speakers {
+    margin-bottom: 40px;
+    padding: 0 20px;
 }
 
-/* Add responsive design for smaller screens */
+.invited-speakers .organizer-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 10px;
+    max-width: 900px;
+}
+
+.invited-speakers .organizer-image {
+    margin: 0 20px 0 0;
+}
+
+.invited-speakers .organizer-info {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.invited-speakers .organizer-info h4,
+.invited-speakers .organizer-info p {
+    text-align: left;
+}
+
+/* Global paragraph style that excludes organizer info */
+p:not(.organizer-info p) {
+    text-align: justify;
+    margin: 24px auto;
+    padding: 0;
+    width: 900px;
+}
+
+/* Responsive design */
 @media only screen and (max-width: 1100px) {
     .organizer-section {
         grid-template-columns: repeat(2, 1fr);
